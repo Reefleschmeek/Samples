@@ -71,7 +71,8 @@ vec4 get_observed_r4(vec3 object_origin, vec3 local_vert) {
 	vec4 test_point;
 	float error;
 	
-	//("World as measured" observation mode) Perform binary search to find the intersection between the player's plane of simultaneity and the vertex's world line.
+	//("World as measured" observation mode)
+	//Perform binary search to find the intersection between the player's plane of simultaneity and the vertex's world line.
 	if (observation_mode == 0) {
 		vec4 simultaneity_plane_origin = vec4(player_position, player_world_time * c);
 		vec4 simultaneity_plane_normal = vec4(-player_velocity, c);
@@ -96,7 +97,8 @@ vec4 get_observed_r4(vec3 object_origin, vec3 local_vert) {
 		
 	}
 	
-	//("World as seen" observation mode) Perform binary search to find the intersection between the player's past light cone and the vertex's world line.
+	//("World as seen" observation mode)
+	//Perform binary search to find the intersection between the player's past light cone and the vertex's world line.
 	if (observation_mode == 1) {
 		vec3 light_cone_origin_space = player_position;
 		float light_cone_origin_ct = player_world_time * c;
