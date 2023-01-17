@@ -35,7 +35,7 @@ class Wall:
 		collision_left = null
 		collision_right = null
 	
-	#Moves the wall inwards by a distance d.
+	#Moves the wall inwards by a distance d, and updated collision bounds.
 	func process(d):
 		radius0 -= d
 		radius1 -= d
